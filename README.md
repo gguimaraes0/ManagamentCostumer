@@ -30,3 +30,28 @@ create procedure spDeleteCustomer ( @CPF CHAR(11) ) as begin delete Customer whe
 create procedure spQueryCustomer ( @CPF CHAR(11) ) as begin select * from Customer where CPF = @CPF end 
 
 create procedure spListCustomers as begin select * from Customer end 
+
+INSERT INTO CustomerSituations (Name)
+VALUES ( 'Nivel1');
+
+INSERT INTO CustomerSituations (Name)
+VALUES ( 'Nivel2');
+
+INSERT INTO CustomerSituations (Name)
+VALUES ( 'Nivel3');
+
+INSERT INTO CustomerSituations (Name)
+VALUES ( 'Nivel4');
+
+
+INSERT INTO CustomerTypes (Name)
+VALUES ('Auto');
+
+INSERT INTO CustomerTypes (Name)
+VALUES ( 'Residência');
+
+INSERT INTO CustomerTypes (Name)
+VALUES ( 'Vida');
+
+INSERT INTO CustomerTypes (Name)
+VALUES ( 'Empresa');
