@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagamentCostumer.WebService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,12 +13,18 @@ namespace ManagamentCostumer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var a = CostumerService.GetCustomers();
+
+            ListCustomers.DataSource = a;
+            ListCustomers.DataBind();
+
+            //  Table1.Rows.AddRange(a);
 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Page1.aspx");
+            Response.Redirect("~/RegisterCostumer.aspx");
         }
     }
 }
