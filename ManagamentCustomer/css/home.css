@@ -1,0 +1,61 @@
+﻿body {
+}
+
+.home {
+    background-image: url(/Assets/background.png);
+    height: 100%;
+    width: 100%;
+}
+
+.default {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-initRegister {
+    margin: auto;
+}
+
+.table {
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+.cabecalho {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table, tr, td {
+    border: 3px solid;
+    margin: auto 200px;
+}
+
+.row{
+    margin:50px;
+    font-size: 20px;
+}
+
+.bottom {
+    background-color: azure;
+    border-radius: 4%;
+    padding: 50px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+}
+
+.bottomHome {
+    background-color: azure;
+    border-radius: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    padding: 150px;
+}
+
+.name{
+    margin-bottom: 15px;
+}

@@ -1,0 +1,12 @@
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\obj\Debug\ManagamentCustomer.Service.csproj.AssemblyReference.cache
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\obj\Debug\ManagamentCustomer.Service.csproj.CoreCompileInputs.cache
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\bin\Debug\App_Data\ManagamentCustomer.mdf
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\bin\Debug\App_Data\ManagamentCustomer_log.ldf
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\bin\Debug\ManagamentCustomer.Service.dll.config
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\bin\Debug\ManagamentCustomer.Service.dll
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\bin\Debug\ManagamentCustomer.Service.pdb
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\bin\Debug\ManagamentCustomer.Database.dll
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\bin\Debug\ManagamentCustomer.Database.pdb
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\obj\Debug\ManagamentCustomer.Service.csproj.CopyComplete
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\obj\Debug\ManagamentCustomer.Service.dll
+C:\Users\gusta\3D Objects\1\ManagamentCustomer.Service\obj\Debug\ManagamentCustomer.Service.pdb
