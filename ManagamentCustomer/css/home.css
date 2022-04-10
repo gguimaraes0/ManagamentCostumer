@@ -13,8 +13,8 @@
     flex-direction: column;
 }
 
-.btn-initRegister {
-    margin: auto;
+.btn-init {
+    margin-right: 65%;
 }
 
 .cabecalho {
@@ -35,4 +35,13 @@
 
 .name{
     margin-bottom: 15px;
+}
+.divButtons {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-search{
+    margin-right: 5px;
 }

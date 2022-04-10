@@ -33,6 +33,15 @@ namespace ManagamentCustomer
         protected global::System.Web.UI.WebControls.Button RegisterCustomer;
 
         /// <summary>
+        /// SearchById control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SearchById;
+
+        /// <summary>
         /// repCustomer control.
         /// </summary>
         /// <remarks>

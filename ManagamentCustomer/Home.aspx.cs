@@ -43,5 +43,10 @@ namespace ManagamentCustomer
         {
 
         }
+
+        protected void SearchById_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
