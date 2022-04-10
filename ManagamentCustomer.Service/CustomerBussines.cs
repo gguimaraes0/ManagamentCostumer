@@ -19,9 +19,15 @@ namespace ManagamentCustomer.Service
             {
                 //validar cpf
             }
-            string newCPF = Regex.Replace(custumer.CPF, "[^0-9]", "");
-            custumer.CPF = newCPF;
+            custumer.CPF = ExcludeDotsCPF(custumer.CPF);
             return custumer;
+        }
+
+        public static string ExcludeDotsCPF(string cpf)
+        {
+            string newCPF = Regex.Replace(cpf, "[^0-9]", "");
+            cpf = newCPF;
+            return cpf;
         }
     }
 }

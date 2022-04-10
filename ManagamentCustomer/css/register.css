@@ -1,7 +1,7 @@
 ﻿body {
 }
 
-.home {
+.register {
     background-image: url(/Assets/background.png);
     height: 100%;
     width: 100%;
@@ -13,26 +13,31 @@
     flex-direction: column;
 }
 
-.btn-initRegister {
+.btn-Register {
     margin: auto;
 }
 
 .cabecalho {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+.row {
+    margin: 50px;
+    font-size: 20px;
 }
 
 .bottom {
     background-color: azure;
     border-radius: 4%;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding: 50px;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-top: 5%;
-    padding: 120px;
 }
 
-.name{
+.name {
     margin-bottom: 15px;
 }

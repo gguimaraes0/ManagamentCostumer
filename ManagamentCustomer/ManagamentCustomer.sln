@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagamentCustomer", "ManagamentCustomer.csproj", "{14C8DAC1-74F4-4D93-B774-002146BA133B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A1D4B6E0-AE6C-425C-89C4-8579C6F37C17} = {A1D4B6E0-AE6C-425C-89C4-8579C6F37C17}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagamentCustomer.Database", "..\ManagamentCustomer.Database\ManagamentCustomer.Database.csproj", "{4D909AFD-A927-45BE-A40C-41E70610FB01}"
 EndProject

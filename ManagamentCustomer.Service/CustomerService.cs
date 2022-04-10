@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 namespace ManagamentCustomer.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class CustomerService/* : ICustomer*/
+    public class CustomerService
     {
         public static List<Customer> GetAllCustomers()
         {
@@ -32,11 +32,11 @@ namespace ManagamentCustomer.Service
             }
         }
 
-
         public static bool DeleteCustomer(string cpf)
         {
             try
             {//mensagem de confirmação
+                cpf = CustomerBussines.ExcludeDotsCPF(cpf);
                 CustomerDAO.DeleteCustomer(cpf);
                 return true;
             }

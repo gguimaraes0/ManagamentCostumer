@@ -44,10 +44,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ManagamentCustomer.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Bin\ManagamentCustomer.Service.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -116,6 +112,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="css\home.css" />
+    <Content Include="css\register.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -201,6 +198,10 @@
     <ProjectReference Include="..\ManagamentCustomer.Database\ManagamentCustomer.Database.csproj">
       <Project>{4D909AFD-A927-45BE-A40C-41E70610FB01}</Project>
       <Name>ManagamentCustomer.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManagamentCustomer.Service\ManagamentCustomer.Service.csproj">
+      <Project>{A1D4B6E0-AE6C-425C-89C4-8579C6F37C17}</Project>
+      <Name>ManagamentCustomer.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
