@@ -6,3 +6,11 @@ C:\Users\gusta\3D Objects\1\ManagamentCustomer.Database\obj\Debug\ManagamentCust
 C:\Users\gusta\3D Objects\1\ManagamentCustomer.Database\obj\Debug\ManagamentCustomer.Database.csproj.CoreCompileInputs.cache
 C:\Users\gusta\3D Objects\1\ManagamentCustomer.Database\obj\Debug\ManagamentCustomer.Database.dll
 C:\Users\gusta\3D Objects\1\ManagamentCustomer.Database\obj\Debug\ManagamentCustomer.Database.pdb
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\bin\Debug\App_Data\ManagamentCustomer.mdf
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\bin\Debug\App_Data\ManagamentCustomer_log.ldf
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\bin\Debug\ManagamentCustomer.Database.dll
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\bin\Debug\ManagamentCustomer.Database.pdb
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\obj\Debug\ManagamentCustomer.Database.csproj.AssemblyReference.cache
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\obj\Debug\ManagamentCustomer.Database.csproj.CoreCompileInputs.cache
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\obj\Debug\ManagamentCustomer.Database.dll
+C:\Users\gusta\3D Objects\commit\ManagamentCostumer\ManagamentCustomer.Database\obj\Debug\ManagamentCustomer.Database.pdb
