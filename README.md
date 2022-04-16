@@ -33,6 +33,7 @@ as begin insert into Customer (CPF, CustomerType, Sex, CustomerSituation) values
 as
 begin
 update Customer set
+CPF =@CPF,
 CustomerType = @CustomerType,
 Sex = @Sex, 
 CustomerSituation = @CustomerSituation
