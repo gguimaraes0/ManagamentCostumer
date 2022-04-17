@@ -32,8 +32,8 @@ namespace ManagamentCustomer
         }
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
-            var id = ((System.Web.UI.WebControls.Button)sender).CommandArgument.ToString();
-            if (id == null)
+            string id = ((System.Web.UI.WebControls.Button)sender).CommandArgument.ToString();
+            if (String.IsNullOrEmpty(id))
                 return;
             // Queria usar o sweetAlert2 porém também não consegui.
             DialogResult dialogResult = MessageBox.Show("Deseja Realmente excluir esse cliente ?", "Atenção", MessageBoxButtons.YesNo);
@@ -48,8 +48,8 @@ namespace ManagamentCustomer
         }
         protected void BtnEdit_Click(object sender, EventArgs e)
         {
-            var id = ((System.Web.UI.WebControls.Button)sender).CommandArgument.ToString();
-            if (id == null)
+            string id = ((System.Web.UI.WebControls.Button)sender).CommandArgument.ToString();
+            if (String.IsNullOrEmpty(id))
                 return;
             Response.Redirect("~/EditRegister.aspx?cpf="+ id);
         }
@@ -57,7 +57,7 @@ namespace ManagamentCustomer
         protected void SearchById_Click(object sender, EventArgs e)
         {
             _Customers.Clear();
-            string cpf = inputCPF.Text;          
+            string cpf = inputCPF.Text;
             Customer customer = CustomerService.GetCustomer(cpf);
             _Customers.Add(customer);
 

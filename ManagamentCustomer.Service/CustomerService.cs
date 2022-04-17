@@ -47,7 +47,7 @@ namespace ManagamentCustomer.Service
         {
             try
             {
-                Customer result = CustomerDAO.GetCustomerByCPF(oldCpf);
+                Customer result = CustomerDAO.GetCustomerByCPF(customer.CPF);
                 if (result != null)
                 {
                     return "Cliente com esse CPF já cadastrado";
