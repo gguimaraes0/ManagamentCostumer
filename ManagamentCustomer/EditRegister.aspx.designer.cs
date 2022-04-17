@@ -11,7 +11,7 @@ namespace ManagamentCustomer
 {
 
 
-    public partial class Home
+    public partial class EditRegister
     {
 
         /// <summary>
@@ -24,48 +24,48 @@ namespace ManagamentCustomer
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// RegisterCustomer control.
+        /// CPF control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterCustomer;
+        protected global::System.Web.UI.WebControls.TextBox CPF;
 
         /// <summary>
-        /// SearchById control.
+        /// DropDownType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SearchById;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownType;
 
         /// <summary>
-        /// inputCPF control.
+        /// DropDownSituation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox inputCPF;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownSituation;
 
         /// <summary>
-        /// ClearSearch control.
+        /// DropDownSex control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ClearSearch;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownSex;
 
         /// <summary>
-        /// repCustomer control.
+        /// btnRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repCustomer;
+        protected global::System.Web.UI.WebControls.Button btnRegister;
     }
 }

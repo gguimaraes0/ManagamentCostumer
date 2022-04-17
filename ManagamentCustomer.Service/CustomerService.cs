@@ -32,6 +32,31 @@ namespace ManagamentCustomer.Service
             }
         }
 
+        public static bool EditCustomer(Customer customer, string oldCpf)
+        {
+            try
+            {
+                CustomerDAO.EditCostumer(customer, oldCpf);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static Customer GetCustomer(string customerCpf)
+        {
+            try
+            {
+                return CustomerDAO.GetCustomerByCPF(customerCpf);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public static bool DeleteCustomer(string cpf)
         {
             try

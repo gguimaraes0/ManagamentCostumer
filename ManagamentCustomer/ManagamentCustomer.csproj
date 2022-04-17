@@ -113,6 +113,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\home.css" />
     <Content Include="css\register.css" />
+    <Content Include="EditRegister.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -161,6 +162,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="EditRegister.aspx.cs">
+      <DependentUpon>EditRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRegister.aspx.designer.cs">
+      <DependentUpon>EditRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

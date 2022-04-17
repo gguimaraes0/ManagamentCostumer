@@ -18,9 +18,20 @@
             <div class="default">
                 <label class="cabecalho">Gerenciamento de Usuários</label>
                 <div class="divButtons">
-                    <asp:Button ID="RegisterCustomer" runat="server" CssClass="btn-init btn btn-primary" Text="Iniciar Cadastro" OnClick="RegisterCustomer_Click" />
-                    <asp:Button ID="SearchById" runat="server" CssClass="btn-search btn btn-warning" Text="Buscar por CPF" OnClick="SearchById_Click" />
-                    <input type="text" class="inputCPF" />
+                    <div>
+                        <asp:Button ID="RegisterCustomer" runat="server" CssClass="btn-init btn btn-primary" Text="Iniciar Cadastro" OnClick="RegisterCustomer_Click" />
+                    </div>
+                    <div>
+                        <asp:Button ID="SearchById" runat="server" CssClass="btn-search btn btn-warning" Text="Buscar por CPF" OnClick="SearchById_Click" />
+                        <asp:TextBox ID="inputCPF" type="text" runat="server" class="inputCPF"></asp:TextBox>
+                        <asp:Button ID="ClearSearch" runat="server" CssClass="btn-clear btn btn-info" Text="Limpar Busca" OnClick="ClearSearch_Click" />
+                    </div>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
                 </div>
 
                 <table class="table">
@@ -68,6 +79,8 @@
 <script>
     $('.lblCPF').mask('000.000.000-00');
     $('.inputCPF').mask('000.000.000-00');
-
+    $('#BtnDelete').on('closed.bs.alert', function () {
+        // do something…
+    })
 </script>
 </html>

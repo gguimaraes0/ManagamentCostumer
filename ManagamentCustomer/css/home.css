@@ -14,7 +14,6 @@
 }
 
 .btn-init {
-    margin-right: 65%;
 }
 
 .cabecalho {
@@ -33,15 +32,22 @@
     padding: 120px;
 }
 
-.name{
+.name {
     margin-bottom: 15px;
 }
+
 .divButtons {
     text-align: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.btn-search{
+.btn-search {
     margin-right: 5px;
+}
+
+.btn-clear {
+    margin-left: 5px;
 }

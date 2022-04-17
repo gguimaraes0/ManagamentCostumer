@@ -16,6 +16,28 @@ namespace ManagamentCustomer.Database.DAO
 
             return true;
         }
+
+        public static bool EditCostumer(Customer customer, string oldCpf)
+        {
+            HelperDAO.ExecutaProc("spAlterCustomer", CriaParametrosParaUpdate(customer, oldCpf));
+
+            return true;
+        }
+
+        protected static SqlParameter[] CriaParametrosParaUpdate(Customer customer, string oldCpf)
+        {
+            SqlParameter[] parametros = new SqlParameter[5];
+            parametros[0] = new SqlParameter("CPF", customer.CPF);
+            parametros[1] = new SqlParameter("oldCPF", oldCpf);
+
+            parametros[2] = new SqlParameter("CustomerType", Convert.ToInt32(customer.CustomerTypes));
+            parametros[3] = new SqlParameter("Sex", customer.Sex);
+            parametros[4] = new SqlParameter("CustomerSituation", Convert.ToInt32(customer.CustomerSituations));
+
+            return parametros;
+        }
+
+
         protected static SqlParameter[] CriaParametros(Customer customer)
         {
             SqlParameter[] parametros = new SqlParameter[4];
@@ -24,6 +46,13 @@ namespace ManagamentCustomer.Database.DAO
             parametros[2] = new SqlParameter("Sex", customer.Sex);
             parametros[3] = new SqlParameter("CustomerSituation", Convert.ToInt32(customer.CustomerSituations));
 
+            return parametros;
+        }
+
+        protected static SqlParameter[] CriaParametrosSelect(string customerCpf)
+        {
+            SqlParameter[] parametros = new SqlParameter[1];
+            parametros[0] = new SqlParameter("CPF", customerCpf);
             return parametros;
         }
 
@@ -36,7 +65,19 @@ namespace ManagamentCustomer.Database.DAO
                 customers.Add(MontaModel(dataRow));
             return customers;
         }
+        public static Customer GetCustomerByCPF(string customerCpf)
+        {
+            var result = HelperDAO.ExecutaProcSelect("spQueryCustomer", CriaParametrosSelect(customerCpf));
 
+            if (result.Rows.Count == 0)
+                return null;
+            else
+            {
+                DataRow registro = result.Rows[0];
+                return MontaModel(registro);
+            }
+
+        }
         protected static Customer MontaModel(DataRow dataRow)
         {
             Customer U = new Customer();

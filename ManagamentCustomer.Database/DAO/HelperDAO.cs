@@ -15,7 +15,6 @@ namespace ManagamentCustomer.Database.DAO
         {
             try
             {
-
                 using (SqlConnection conexao = GetConexao())
                 {
                     using (SqlCommand comando = new SqlCommand(nomeProc, conexao))
@@ -52,7 +51,6 @@ namespace ManagamentCustomer.Database.DAO
         {
             try
             {
-
                 using (SqlConnection conexao = GetConexao())
                 {
                     using (SqlDataAdapter adapter = new SqlDataAdapter(nomeProc, conexao))
