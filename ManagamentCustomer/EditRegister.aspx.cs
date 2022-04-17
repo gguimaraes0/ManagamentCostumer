@@ -20,7 +20,7 @@ namespace ManagamentCustomer
             if (!IsPostBack)
             {
                 string customerCPF = Request.QueryString["cpf"];
-                Customer = Service.CustomerService.GetCustomer(customerCPF);
+                Customer = CustomerService.customerService.GetCustomer(customerCPF);
                 oldCPF = customerCPF;
                 FillFields();
             }
@@ -47,8 +47,50 @@ namespace ManagamentCustomer
             Enum.TryParse(type, out CustomerTypes resulttyp);
             Customer.CustomerTypes = resulttyp;
 
-            CustomerService.EditCustomer(Customer, oldCPF);
+
+            string result = "";
+            if (ValidateCPF(Customer))
+                result = CustomerService.customerService.EditCustomer(Customer, oldCPF);
+            else
+                return;
+            if (String.IsNullOrEmpty(result))
+            {
+                Message("Cliente atualizado");
+                Response.Redirect("~/Home.aspx");
+            }
+            else
+            {
+                Message(result);
+            }
+
+            CustomerService.customerService.EditCustomer(Customer, oldCPF);
             Response.Redirect("~/Home.aspx");
+        }
+
+
+        private bool ValidateCPF(Customer customer)
+        {
+            customer.CPF = CustomerBussines.ExcludeDotsCPF(customer.CPF);
+            if (customer.CPF.Length < 11)
+            {
+                ModelState.AddModelError("CPF Inválido!", "Obrigatório informar um número válido.");
+                lblValidateCPF.Text = "CPF Inválido!";
+                return false;
+            }
+            else
+                return true;
+        }
+        private void Message(string result)
+        {
+            String csname1 = "PopupScript";
+            //Queria usar sweetAlert2 mas não consegui.
+            if (!IsClientScriptBlockRegistered(csname1))
+            {
+                String cstext1 = "<script type=\"text/javascript\">" +
+                    "alert('"+result+"');</" + "script>";
+
+                RegisterStartupScript(csname1, cstext1);
+            }
         }
 
         public void FillFields()

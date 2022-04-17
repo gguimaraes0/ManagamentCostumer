@@ -11,44 +11,61 @@ using System.Text.RegularExpressions;
 namespace ManagamentCustomer.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class CustomerService
+    public class CustomerService : ICustomer
     {
-        public static List<Customer> GetAllCustomers()
+        public static CustomerService customerService = new CustomerService();
+
+        public CustomerService()
+        {
+          
+        }
+
+        public List<Customer> GetAllCustomers()
         {
             return CustomerDAO.GetCustomers();
         }
 
-        public static bool InsertCustomer(Customer customer)
+        public string InsertCustomer(Customer customer)
         {
             try
             {
-                customer = CustomerBussines.VerifyInsertCostumer(customer);
+                Customer result = CustomerDAO.GetCustomerByCPF(customer.CPF);
+                if (result != null)
+                {
+                    return "Cliente com esse CPF já cadastrado";
+                }
                 CustomerDAO.InsertCostumer(customer);
-                return true;
+                return "";
             }
             catch (Exception ex)
             {
-                return false;
+                return ex.Message;
             }
         }
 
-        public static bool EditCustomer(Customer customer, string oldCpf)
+        public string EditCustomer(Customer customer, string oldCpf)
         {
             try
             {
+                Customer result = CustomerDAO.GetCustomerByCPF(customer.CPF);
+                if (result != null)
+                {
+                    return "Cliente com esse CPF já cadastrado";
+                }
                 CustomerDAO.EditCostumer(customer, oldCpf);
-                return true;
+                return "";
             }
             catch (Exception ex)
             {
-                return false;
+                return ex.Message;
             }
         }
 
-        public static Customer GetCustomer(string customerCpf)
+        public Customer GetCustomer(string customerCpf)
         {
             try
             {
+                customerCpf = CustomerBussines.ExcludeDotsCPF(customerCpf);
                 return CustomerDAO.GetCustomerByCPF(customerCpf);
             }
             catch (Exception ex)
@@ -57,17 +74,17 @@ namespace ManagamentCustomer.Service
             }
         }
 
-        public static bool DeleteCustomer(string cpf)
+        public string DeleteCustomer(string cpf)
         {
             try
-            {//mensagem de confirmação
+            {
                 cpf = CustomerBussines.ExcludeDotsCPF(cpf);
                 CustomerDAO.DeleteCustomer(cpf);
-                return true;
+                return "";
             }
             catch (Exception ex)
             {
-                return false;
+                return ex.Message;
             }
         }
 

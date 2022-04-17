@@ -23,7 +23,7 @@
                     <label class="campos">CPF</label>
                 </div>
                 <asp:TextBox ID="CPF" runat="server" placeholder="Digite o CPF"></asp:TextBox>
-
+                <asp:Label ForeColor="Red" runat="server" Text="" ID="lblValidateCPF"></asp:Label>
             </div>
 
             <div class="row">
@@ -51,7 +51,7 @@
                 </asp:DropDownList>
             </div>
 
-            <asp:Button ID="btnRegister" runat="server" Text="Cadastrar" OnClick="btnRegister_Click" CssClass="btn-Register btn btn-primary" />
+            <asp:Button ID="btnRegister" runat="server" Text="Editar" OnClick="btnRegister_Click" CssClass="btn-Register btn btn-primary" />
         </div>
     </form>
 </body>

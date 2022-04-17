@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace ManagamentCustomer
 {
@@ -18,7 +19,7 @@ namespace ManagamentCustomer
         private void FillFieldsTable()
         {
             _Customers.Clear();
-            _Customers = CustomerService.GetAllCustomers();
+            _Customers = CustomerService.customerService.GetAllCustomers();
             if (!IsPostBack || isRefresh)
             {
                 repCustomer.DataSource = _Customers;
@@ -31,22 +32,33 @@ namespace ManagamentCustomer
         }
         protected void BtnDelete_Click(object sender, EventArgs e)
         {
-            var id = ((Button)sender).CommandArgument.ToString();
-            CustomerService.DeleteCustomer(id);
-            Response.Redirect("~/Home.aspx");
+            var id = ((System.Web.UI.WebControls.Button)sender).CommandArgument.ToString();
+            if (id == null)
+                return;
+            // Queria usar o sweetAlert2 porém também não consegui.
+            DialogResult dialogResult = MessageBox.Show("Deseja Realmente excluir esse cliente ?", "Atenção", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                CustomerService.customerService.DeleteCustomer(id);
+                Message("Cliente Excluído");
+                Response.Redirect("~/Home.aspx");
+            }
+            else
+                Message("Cliente Não Excluído");
         }
         protected void BtnEdit_Click(object sender, EventArgs e)
         {
-            var id = ((Button)sender).CommandArgument.ToString();
+            var id = ((System.Web.UI.WebControls.Button)sender).CommandArgument.ToString();
+            if (id == null)
+                return;
             Response.Redirect("~/EditRegister.aspx?cpf="+ id);
         }
 
         protected void SearchById_Click(object sender, EventArgs e)
         {
             _Customers.Clear();
-            string cpf = inputCPF.Text;
-            cpf = cpf.Replace(".", "").Replace("-", "");
-            Customer customer = CustomerService.GetCustomer(cpf);
+            string cpf = inputCPF.Text;          
+            Customer customer = CustomerService.customerService.GetCustomer(cpf);
             _Customers.Add(customer);
 
             repCustomer.DataSource = _Customers;
@@ -60,6 +72,19 @@ namespace ManagamentCustomer
             FillFieldsTable();
             inputCPF.Text ="";
             isRefresh = false;
+        }
+
+        private void Message(string result)
+        {
+            String csname1 = "PopupScript";
+            //Queria usar sweetAlert2 mas não consegui.
+            if (!IsClientScriptBlockRegistered(csname1))
+            {
+                String cstext1 = "<script type=\"text/javascript\">" +
+                    "swal.fire('"+result+"');</" + "script>";
+
+                RegisterStartupScript(csname1, cstext1);
+            }
         }
     }
 }

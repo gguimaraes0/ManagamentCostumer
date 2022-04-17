@@ -23,7 +23,8 @@
                     <label class="campos">CPF</label>
                 </div>
                 <asp:TextBox ID="CPF" runat="server" placeholder="Digite o CPF"></asp:TextBox>
-
+                <asp:Label ForeColor="Red" runat="server" Text="" ID="lblValidateCPF"></asp:Label>
+                <br />
             </div>
 
             <div class="row">
@@ -32,6 +33,8 @@
                 </div>
                 <asp:DropDownList ID="DropDownType" runat="server">
                 </asp:DropDownList>
+                <span asp-validation-for="type" class="text-danger"></span>
+                <br />
             </div>
             <div class="row">
                 <div class="name">
@@ -39,7 +42,8 @@
                 </div>
                 <asp:DropDownList ID="DropDownSituation" runat="server">
                 </asp:DropDownList>
-
+                <span asp-validation-for="situation" class="text-danger"></span>
+                <br />
             </div>
             <div class="row">
                 <div class="name">
@@ -49,13 +53,15 @@
                     <asp:ListItem>M</asp:ListItem>
                     <asp:ListItem>F</asp:ListItem>
                 </asp:DropDownList>
+                <span asp-validation-for="sex" class="text-danger"></span>
+                <br />
             </div>
 
             <asp:Button ID="btnRegister" runat="server" Text="Cadastrar" OnClick="btnRegister_Click" CssClass="btn-Register btn btn-primary" />
         </div>
     </form>
 </body>
-        <script>
-            $('#CPF').mask('000.000.000-00');
-        </script>
+<script>
+    $('#CPF').mask('000.000.000-00');
+</script>
 </html>

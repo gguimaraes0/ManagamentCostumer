@@ -12,19 +12,19 @@ namespace ManagamentCustomer.Database.DAO
     {
         public static bool InsertCostumer(Customer customer)
         {
-            HelperDAO.ExecutaProc("spInsertCustomer", CriaParametros(customer));
+            HelperDAO.ExecutaProc("spInsertCustomer", CreateParam(customer));
 
             return true;
         }
 
         public static bool EditCostumer(Customer customer, string oldCpf)
         {
-            HelperDAO.ExecutaProc("spAlterCustomer", CriaParametrosParaUpdate(customer, oldCpf));
+            HelperDAO.ExecutaProc("spAlterCustomer", CreateParamUpdate(customer, oldCpf));
 
             return true;
         }
 
-        protected static SqlParameter[] CriaParametrosParaUpdate(Customer customer, string oldCpf)
+        protected static SqlParameter[] CreateParamUpdate(Customer customer, string oldCpf)
         {
             SqlParameter[] parametros = new SqlParameter[5];
             parametros[0] = new SqlParameter("CPF", customer.CPF);
@@ -38,7 +38,7 @@ namespace ManagamentCustomer.Database.DAO
         }
 
 
-        protected static SqlParameter[] CriaParametros(Customer customer)
+        protected static SqlParameter[] CreateParam(Customer customer)
         {
             SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter("CPF", customer.CPF);
@@ -49,7 +49,7 @@ namespace ManagamentCustomer.Database.DAO
             return parametros;
         }
 
-        protected static SqlParameter[] CriaParametrosSelect(string customerCpf)
+        protected static SqlParameter[] CreateParamSelect(string customerCpf)
         {
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("CPF", customerCpf);
@@ -62,23 +62,23 @@ namespace ManagamentCustomer.Database.DAO
             var result = HelperDAO.ExecutaProcSelect("spListCustomers", null);
 
             foreach (DataRow dataRow in result.Rows)
-                customers.Add(MontaModel(dataRow));
+                customers.Add(FillModel(dataRow));
             return customers;
         }
         public static Customer GetCustomerByCPF(string customerCpf)
         {
-            var result = HelperDAO.ExecutaProcSelect("spQueryCustomer", CriaParametrosSelect(customerCpf));
+            var result = HelperDAO.ExecutaProcSelect("spQueryCustomer", CreateParamSelect(customerCpf));
 
             if (result.Rows.Count == 0)
                 return null;
             else
             {
                 DataRow registro = result.Rows[0];
-                return MontaModel(registro);
+                return FillModel(registro);
             }
 
         }
-        protected static Customer MontaModel(DataRow dataRow)
+        protected static Customer FillModel(DataRow dataRow)
         {
             Customer U = new Customer();
             U.CPF =  dataRow["CPF"].ToString();

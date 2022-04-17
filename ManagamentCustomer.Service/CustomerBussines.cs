@@ -11,18 +11,6 @@ namespace ManagamentCustomer.Service
 {
     public class CustomerBussines
     {
-        public static Customer VerifyInsertCostumer(Customer custumer)
-        {
-            Regex rgx = new Regex($@"/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/");
-
-            if (rgx.IsMatch(custumer.CPF))
-            {
-                //validar cpf
-            }
-            custumer.CPF = ExcludeDotsCPF(custumer.CPF);
-            return custumer;
-        }
-
         public static string ExcludeDotsCPF(string cpf)
         {
             string newCPF = Regex.Replace(cpf, "[^0-9]", "");
