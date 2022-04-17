@@ -18,7 +18,7 @@ Crud feito em ASP.NET para cadastro de clientes em uma seguradora
 
 ## Linguagens Utilizadas 📃
 
-- C# in ASP.NET
+- C# in ASP.NET - .NET Framework 4.8
 - Javascript
 - HTML
 - CSS
