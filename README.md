@@ -22,8 +22,22 @@ Stored Procedures
 create procedure spInsertCustomer ( @CPF CHAR(11), @CustomerType INT, @Sex CHAR(1), @CustomerSituation int )
 as begin insert into Customer (CPF, CustomerType, Sex, CustomerSituation) values (@CPF, @CustomerType, @Sex, @CustomerSituation) end
 
- create procedure spAlterCustomer ( @CPF CHAR(11), @CustomerType INT, @Sex CHAR(1), @CustomerSituation int ) 
-as begin update Customer set CustomerType = @CustomerType, Sex = @Sex, CustomerSituation = @CustomerSituation where CPF = @CPF end 
+ create procedure spAlterCustomer 
+ (
+ @CPF CHAR(11),
+ @oldCPF CHAR(11),
+ @CustomerType INT, 
+ @Sex CHAR(1), 
+ @CustomerSituation int 
+ ) 
+as
+begin
+update Customer set
+CPF =@CPF,
+CustomerType = @CustomerType,
+Sex = @Sex, 
+CustomerSituation = @CustomerSituation
+where CPF = @oldCPF end 
 
 create procedure spDeleteCustomer ( @CPF CHAR(11) ) as begin delete Customer where CPF = @CPF end 
 
