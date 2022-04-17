@@ -2,13 +2,20 @@
 
 Crud feito em ASP.NET para cadastro de clientes em uma seguradora
 
+## Interface do Projeto
+
+<a href="https://ibb.co/gD5LXwt"><img src="https://i.ibb.co/19DtpKR/imagem-2022-04-17-184419616.png" alt="imagem-2022-04-17-184419616" border="0"></a>
+
+<a href="https://ibb.co/3dkPPVr"><img src="https://i.ibb.co/GpFrrGx/imagem-2022-04-17-184515860.png" alt="imagem-2022-04-17-184515860" border="0"></a>
+
 ## Como utilizar 🔖
 
 1. Execute no SQL SERVER os comandos para a criação do banco de dados. Utilizando, user ='sa' e password = '123456' na instância '(localdb)\MSSQLLocalDB'.
 2. Baixe a aplicação ou clone em seu repositório.
 3. Procure por "ManagamentCustomer", dentro da pasta ManagamentCustomer, logo após execute-a.
-4. Abra a tela Home.aspx e execute o projeto.
-5. Se precisar, instale as dependências requeridas do projeto.
+4. De Rebuild no projeto.
+5. Abra a tela Home.aspx e execute o projeto.
+6. Se precisar, instale as dependências requeridas do projeto.
 
 ## Ferramentas Utilizadas 📜
 
@@ -30,13 +37,9 @@ Crud feito em ASP.NET para cadastro de clientes em uma seguradora
 - Lógica de segregação de camadas.
 - Ferramentas do WCF para uma melhor utilização, creio que deixou muito a desejar.
 - Singleton para mensagens padrões exibidas
+- Delay ao editar cliente com algum cpf já existente, acontece apenas de vez em quando
+- 
 
-
-## Interface do Projeto
-
-<a href="https://ibb.co/gD5LXwt"><img src="https://i.ibb.co/19DtpKR/imagem-2022-04-17-184419616.png" alt="imagem-2022-04-17-184419616" border="0"></a>
-
-<a href="https://ibb.co/3dkPPVr"><img src="https://i.ibb.co/GpFrrGx/imagem-2022-04-17-184515860.png" alt="imagem-2022-04-17-184515860" border="0"></a>
 ## Database
 <a href="https://ibb.co/LrR5dFs"><img src="https://i.ibb.co/r30s2jX/imagem-2022-04-09-152817.png" alt="imagem-2022-04-09-152817" border="0"></a>
 
