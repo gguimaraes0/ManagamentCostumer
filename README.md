@@ -13,8 +13,9 @@ Crud feito em ASP.NET para cadastro de clientes em uma seguradora
 1. Execute no SQL SERVER os comandos para a criação do banco de dados. Utilizando, user ='sa' e password = '123456' na instância '(localdb)\MSSQLLocalDB'.
 2. Baixe a aplicação ou clone em seu repositório.
 3. Procure por "ManagamentCustomer", dentro da pasta ManagamentCustomer, logo após execute-a.
-4. Abra a tela Home.aspx e execute o projeto.
-5. Se precisar, instale as dependências requeridas do projeto.
+4. De Rebuild no projeto.
+5. Abra a tela Home.aspx e execute o projeto.
+6. Se precisar, instale as dependências requeridas do projeto.
 
 ## Ferramentas Utilizadas 📜
 
