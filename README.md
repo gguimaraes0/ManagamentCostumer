@@ -36,6 +36,8 @@ Crud feito em ASP.NET para cadastro de clientes em uma seguradora
 - Lógica de segregação de camadas.
 - Ferramentas do WCF para uma melhor utilização, creio que deixou muito a desejar.
 - Singleton para mensagens padrões exibidas
+- Delay ao editar cliente com algum cpf já existente, acontece apenas de vez em quando
+- 
 
 ## Database
 <a href="https://ibb.co/LrR5dFs"><img src="https://i.ibb.co/r30s2jX/imagem-2022-04-09-152817.png" alt="imagem-2022-04-09-152817" border="0"></a>
