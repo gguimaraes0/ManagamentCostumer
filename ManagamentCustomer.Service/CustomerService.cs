@@ -11,21 +11,21 @@ using System.Text.RegularExpressions;
 namespace ManagamentCustomer.Service
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
-    public class CustomerService : ICustomer
+    public class CustomerService /*: ICustomer*/
     {
-        public static CustomerService customerService = new CustomerService();
+        public CustomerService customerService = new CustomerService();
 
         public CustomerService()
         {
-          
+
         }
 
-        public List<Customer> GetAllCustomers()
+        public static List<Customer> GetAllCustomers()
         {
             return CustomerDAO.GetCustomers();
         }
 
-        public string InsertCustomer(Customer customer)
+        public static string InsertCustomer(Customer customer)
         {
             try
             {
@@ -43,11 +43,11 @@ namespace ManagamentCustomer.Service
             }
         }
 
-        public string EditCustomer(Customer customer, string oldCpf)
+        public static string EditCustomer(Customer customer, string oldCpf)
         {
             try
             {
-                Customer result = CustomerDAO.GetCustomerByCPF(customer.CPF);
+                Customer result = CustomerDAO.GetCustomerByCPF(oldCpf);
                 if (result != null)
                 {
                     return "Cliente com esse CPF já cadastrado";
@@ -61,7 +61,7 @@ namespace ManagamentCustomer.Service
             }
         }
 
-        public Customer GetCustomer(string customerCpf)
+        public static Customer GetCustomer(string customerCpf)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace ManagamentCustomer.Service
             }
         }
 
-        public string DeleteCustomer(string cpf)
+        public static string DeleteCustomer(string cpf)
         {
             try
             {

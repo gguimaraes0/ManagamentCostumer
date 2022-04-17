@@ -12,17 +12,11 @@ namespace ManagamentCustomer.Service
     [ServiceContract]
     public interface ICustomer
     {
-        [OperationContract]
-        List<Customer> GetAllCustomers();
-
-        [OperationContract]
-        string InsertCustomer(Customer customer);
-        [OperationContract]
-        string EditCustomer(Customer customer, string oldCpf);
-        [OperationContract]
-        Customer GetCustomer(string customerCpf);
-        [OperationContract]
-        string DeleteCustomer(string cpf);
+        //List<Customer> GetAllCustomers();
+        //string InsertCustomer(Customer customer);
+        //string EditCustomer(Customer customer, string oldCpf);
+        //Customer GetCustomer(string customerCpf);
+        //string DeleteCustomer(string cpf);
 
         // TODO: Add your service operations here
     }

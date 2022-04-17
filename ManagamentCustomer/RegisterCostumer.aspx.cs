@@ -44,7 +44,7 @@ namespace ManagamentCustomer
             customer.CustomerTypes = resulttyp;
             string result = "";
             if (ValidateCPF(customer))
-                result = CustomerService.customerService.InsertCustomer(customer);
+                result = CustomerService.InsertCustomer(customer);
             else
                 return;
             if (String.IsNullOrEmpty(result))

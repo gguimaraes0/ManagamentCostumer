@@ -19,7 +19,7 @@ namespace ManagamentCustomer
         private void FillFieldsTable()
         {
             _Customers.Clear();
-            _Customers = CustomerService.customerService.GetAllCustomers();
+            _Customers = CustomerService.GetAllCustomers();
             if (!IsPostBack || isRefresh)
             {
                 repCustomer.DataSource = _Customers;
@@ -39,7 +39,7 @@ namespace ManagamentCustomer
             DialogResult dialogResult = MessageBox.Show("Deseja Realmente excluir esse cliente ?", "Atenção", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                CustomerService.customerService.DeleteCustomer(id);
+                CustomerService.DeleteCustomer(id);
                 Message("Cliente Excluído");
                 Response.Redirect("~/Home.aspx");
             }
@@ -58,7 +58,7 @@ namespace ManagamentCustomer
         {
             _Customers.Clear();
             string cpf = inputCPF.Text;          
-            Customer customer = CustomerService.customerService.GetCustomer(cpf);
+            Customer customer = CustomerService.GetCustomer(cpf);
             _Customers.Add(customer);
 
             repCustomer.DataSource = _Customers;

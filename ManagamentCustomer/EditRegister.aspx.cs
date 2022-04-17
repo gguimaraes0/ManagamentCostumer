@@ -20,9 +20,10 @@ namespace ManagamentCustomer
             if (!IsPostBack)
             {
                 string customerCPF = Request.QueryString["cpf"];
-                Customer = CustomerService.customerService.GetCustomer(customerCPF);
+                Customer = CustomerService.GetCustomer(customerCPF);
                 oldCPF = customerCPF;
                 FillFields();
+
             }
             else if (oldCPF == null)
             {
@@ -50,7 +51,7 @@ namespace ManagamentCustomer
 
             string result = "";
             if (ValidateCPF(Customer))
-                result = CustomerService.customerService.EditCustomer(Customer, oldCPF);
+                result = CustomerService.EditCustomer(Customer, oldCPF);
             else
                 return;
             if (String.IsNullOrEmpty(result))
@@ -62,9 +63,6 @@ namespace ManagamentCustomer
             {
                 Message(result);
             }
-
-            CustomerService.customerService.EditCustomer(Customer, oldCPF);
-            Response.Redirect("~/Home.aspx");
         }
 
 
