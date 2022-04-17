@@ -1,6 +1,29 @@
-# CRUD-AspNet
-Crud feito em asp.net para cadastro de clientes em uma seguradora
+# Cadastro de Clientes
 
+Crud feito em ASP.NET para cadastro de clientes em uma seguradora
+
+## Como utilizar 🔖
+
+1. Execute no SQL SERVER os comandos para a criação do banco de dados. Utilizando, user ='sa' e password = '123456' na instância '(localdb)\MSSQLLocalDB'.
+2. Baixe a aplicação ou clone em seu repositório.
+3. Procure por "ManagamentCustomer", dentro da pasta ManagamentCustomer, logo após execute-a.
+4. Abra a tela Home.aspx e execute o projeto.
+5. Se precisar, instale as dependências requeridas do projeto.
+
+## Ferramentas Utilizadas 📜
+
+- Bootstrap
+- SweetAlert
+- JQuery
+
+## Linguagens Utilizadas 📃
+
+- C# in ASP.NET
+- Javascript
+- HTML
+- CSS
+
+## Database
 <a href="https://ibb.co/LrR5dFs"><img src="https://i.ibb.co/r30s2jX/imagem-2022-04-09-152817.png" alt="imagem-2022-04-09-152817" border="0"></a>
 
 
@@ -56,7 +79,6 @@ VALUES ( 'Nivel3');
 
 INSERT INTO CustomerSituations (Name)
 VALUES ( 'Nivel4');
-
 
 INSERT INTO CustomerTypes (Name)
 VALUES ('Auto');
