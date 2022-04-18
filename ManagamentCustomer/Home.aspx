@@ -17,7 +17,7 @@
     <div class="bottom">
         <form id="form1" runat="server">
             <div class="default">
-                <label class="cabecalho">Gerenciamento de Usuários</label>
+                <label class="cabecalho">Gerenciamento de Clientes</label>
                 <div class="divButtons">
                     <div>
                         <asp:Button ID="RegisterCustomer" runat="server" CssClass="btn-init btn btn-primary" Text="Iniciar Cadastro" OnClick="RegisterCustomer_Click" />
